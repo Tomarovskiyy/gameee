@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -107,76 +107,11 @@ h1 {
     border-radius: 10px;
     background: #ddd;
     margin-bottom: 20px;
-}
-
-.game-board {
-    display: inline-block;
-    background: #ddd;
-    cursor: grab;
-    transform-origin: center;
-    transition: transform 0.1s ease;
-}
-
-.game-board:active {
-    cursor: grabbing;
-}
-
-.row {
+    /* Сделаем canvas блочным и центрируем */
     display: flex;
-    flex-wrap: nowrap;
-}
-
-.cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #999;
-    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.1s ease;
-    transition: width 0.1s ease, height 0.1s ease, font-size 0.1s ease;
+    align-items: center;
 }
-
-.cell:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-
-.cell.revealed {
-    background: #fff;
-    border: 1px solid #ccc;
-    cursor: default;
-}
-
-.cell.revealed:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.cell.flagged {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
-    color: white;
-}
-
-.cell.mine {
-    background: linear-gradient(135deg, #ff4757 0%, #ff3838 100%);
-    color: white;
-}
-
-.cell.number-1 { color: #1976d2; }
-.cell.number-2 { color: #388e3c; }
-.cell.number-3 { color: #d32f2f; }
-.cell.number-4 { color: #7b1fa2; }
-.cell.number-5 { color: #f57c00; }
-.cell.number-6 { color: #00796b; }
-.cell.number-7 { color: #5d4037; }
-.cell.number-8 { color: #424242; }
 
 .controls {
     display: flex;
@@ -241,12 +176,6 @@ h1 {
 }
 
 @media (max-width: 600px) {
-    .cell {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
-    }
-    
     .container {
         padding: 20px;
     }
